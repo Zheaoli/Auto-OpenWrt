@@ -18,7 +18,7 @@ sed -i 's/192.168.1.1/192.168.40.1/g' package/base-files/files/bin/config_genera
 # sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 ########### 更改大雕源码（可选）###########
-sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g' target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
 
 ########### 更改默认主题（可选）###########
 # 删除自定义源默认的 argon 主题
