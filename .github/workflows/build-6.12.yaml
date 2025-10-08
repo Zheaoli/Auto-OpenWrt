@@ -55,9 +55,8 @@ jobs:
     - name: luci-theme-argon install
       run: |
        cd openwrt
-       cd package/lean  
-       rm -rf luci-theme-argon  
-       git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+       cd package  
+       git clone https://github.com/jerrykuku/luci-theme-argon.git
      
     - name: Load custom feeds
       run: |
