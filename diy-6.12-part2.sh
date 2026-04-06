@@ -46,15 +46,6 @@ popd
 cd ~/actions-runner/_work/Auto-OpenWrt/Auto-OpenWrt/openwrt
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 
-# Workaround: savannah cgit returns 400 for gnulib snapshot
-# Replace tools/gnulib with immortalwrt's version (git clone + matching patches)
-rm -rf tools/gnulib
-git clone --depth 1 --filter=blob:none --sparse \
-  https://github.com/immortalwrt/immortalwrt.git /tmp/immortalwrt-gnulib
-cd /tmp/immortalwrt-gnulib && git sparse-checkout set tools/gnulib
-cp -rf /tmp/immortalwrt-gnulib/tools/gnulib ~/actions-runner/_work/Auto-OpenWrt/Auto-OpenWrt/openwrt/tools/gnulib
-rm -rf /tmp/immortalwrt-gnulib
-cd ~/actions-runner/_work/Auto-OpenWrt/Auto-OpenWrt/openwrt
 
 # Modify default banner
 rm -rf package/base-files/files/etc/banner
