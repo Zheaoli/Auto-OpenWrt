@@ -10,6 +10,9 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
+# Switch LuCI to openwrt-24.10 branch
+sed -i 's|luci.git;openwrt-23.05|luci.git;openwrt-24.10|' feeds.conf.default
+
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
